@@ -17,18 +17,16 @@ Echo.     [92m[1] Get filename - Support image extension ( *.jpg, *.png, *.bmp,
 Echo.
 Echo.     [92m[2] Get all filename in folder[0m
 echo. 
-Echo.     [93m[^^!3] Update soon ^^!^^![0m
+Echo.     [93m[^^!3] Check update ^^!^^![0m
 Echo.
 echo. :=======================================================:
 choice /C:123 /N /M "[+] Enter Your Choice [1,2,3] : "
-if errorlevel 3 goto :updatesoon
+if errorlevel 3 goto :checkforupdate
 if errorlevel 2 goto :checkallfile
 if errorlevel 1 goto :checkfile
 ::===========================================================================
-:updatesoon
-echo. [93m[^^!]Check update for this function at https://github.com/noobpk/Get-File-Name-Bulk[0m
-echo. [96m[^>]Press any key to continue...[0m
-pause > nul
+:checkforupdate
+start https://github.com/noobpk/Get-File-Name-Bulk
 CLS
 GOTO MAINMENU
 ::===========================================================================
